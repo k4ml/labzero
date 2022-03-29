@@ -9,6 +9,7 @@ That will generate new directory `<your_project_name>`.
 
     cd <your_project_name>
     poetry install
+    poetry run <your_project_name> manage runserver
 
 Python dependencies manager is using [Poetry](docs/poetry.md).
 
