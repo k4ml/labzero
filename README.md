@@ -40,4 +40,12 @@ Main application code should be in `src/<your_project_name>/` - this will be you
 └── webpack.mix.js
 ```
 
+## Deployment
+
+Labzero based project can be deployed using [webship](https://github.com/lalokalabs/webship/).
+
+On production, all cli should be accessed through `/app/<project_name>/current/.venv/bin/`. For example:-
+
+    /app/myapp/current/.venv/bin/myapp manage shell
+
 [projvsapp]:https://dev.to/k4ml/django-moving-away-from-project-vs-app-dichotomy-3e7
