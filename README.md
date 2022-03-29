@@ -40,6 +40,8 @@ Main application code should be in `src/<your_project_name>/` - this will be you
 └── webpack.mix.js
 ```
 
+`sub-src/` directory is a workaround due to [poetry not installing] `console_scripts` entry-ppoints as real script and causing issue with django runserver command.
+
 ## Deployment
 
 Labzero based project can be deployed using [webship](https://github.com/lalokalabs/webship/).
@@ -49,3 +51,4 @@ On production, all cli should be accessed through `/app/<project_name>/current/.
     /app/myapp/current/.venv/bin/myapp manage shell
 
 [projvsapp]:https://dev.to/k4ml/django-moving-away-from-project-vs-app-dichotomy-3e7
+[poetry not installing]:https://github.com/python-poetry/poetry/issues/241#issuecomment-629754768
