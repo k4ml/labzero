@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     "django.contrib.messages",
     "django.contrib.staticfiles",
     "djangomix",
+    "{{cookiecutter.project_name}}",
 ]
 
 if DEBUG:
