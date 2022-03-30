@@ -45,6 +45,8 @@ Main application code should be in `src/<your_project_name>/` - this will be you
 
 `sub-src/` directory is a workaround due to [poetry not installing] `console_scripts` entry-ppoints as real script and causing issue with django runserver command.
 
+Read more details of the project setup [here](docs/zero.md).
+
 ## Deployment
 
 Labzero based project can be deployed using [webship](https://github.com/lalokalabs/webship/).
