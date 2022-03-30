@@ -13,7 +13,7 @@ That will generate new directory `<your_project_name>`.
     nvm use 14.17.1
     npm install
 
-Python dependencies manager is using [Poetry](docs/poetry.md).
+Python dependencies manager is using [Poetry](docs/poetry.md). Make sure to add generated `poetry.lock` to your source control system.
 
 ## Frontend Stack
 - [NVM](docs/nvm.md)
