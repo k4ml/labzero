@@ -5,3 +5,5 @@ This is really a hard question and failing to answer that question, we end up ad
 If your application is heavy on UI, we would recommend using VueJS. Otherwise we think [htmx] also good enough.
 
 In Labzero we will provide examples for both libraries.
+
+[htmx]:htmx.md
