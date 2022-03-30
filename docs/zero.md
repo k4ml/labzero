@@ -1,4 +1,6 @@
 
+## Python
+At least 3.8 and above.
 
 ## Environment Settings
 Settings that differ between environment (prod/dev/staging/etc) and also sensitive data such as credentials should be in `.env` file and we use [django-environ] to populate the file's value into `os.environ`.
