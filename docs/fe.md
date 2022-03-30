@@ -7,3 +7,4 @@ If your application is heavy on Reactive UI, we would recommend using VueJS. Oth
 In Labzero we will provide examples for both libraries.
 
 [htmx]:htmx.md
+[alpinejs]:alpinejs.md
