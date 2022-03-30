@@ -21,6 +21,8 @@ Python dependencies manager is using [Poetry](docs/poetry.md).
 - [Laravel Mix](docs/mix.md)
 - [Yarn](docs/yarn.md)
 
+Refer [FE](docs/fe.md) for more details.
+
 ## Structure
 
 Main application code should be in `src/<your_project_name>/` - this will be your "[django project and app][projvsapp]".
