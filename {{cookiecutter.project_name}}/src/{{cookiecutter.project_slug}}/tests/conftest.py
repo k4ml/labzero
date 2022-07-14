@@ -8,7 +8,7 @@ def hook(settings):
 
 
 pytest_plugins = configure_djangoapp_plugin(
-    settings="{{cookiecutter.project_name}}.settings",
+    settings="{{cookiecutter.project_slug}}.settings",
 )
 
 @pytest.fixture

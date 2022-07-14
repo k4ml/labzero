@@ -12,7 +12,7 @@ setup(
     ],
     entry_points={
         "console_scripts": [
-            "{{cookiecutter.project_name}}={{cookiecutter.project_name}}_cli:main",
+            "{{cookiecutter.project_name}}={{cookiecutter.project_slug}}_cli:main",
         ]
     },
 )

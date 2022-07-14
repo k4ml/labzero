@@ -6,13 +6,13 @@ authors = ["{{cookiecutter.project_author_name}} <{{cookiecutter.project_author_
 license = "MIT"
 
 packages = [
-    { include = "{{cookiecutter.project_name}}", from = "src" },
+    { include = "{{cookiecutter.project_slug}}", from = "src" },
 ]
 
 [tool.poetry.dependencies]
 python = "^3.8"
 Django = "^4.0.3"
-{{cookiecutter.project_name}}-cli = {path = "sub-src/{{cookiecutter.project_name}}_cli", develop = true}
+{{cookiecutter.project_slug}}-cli = {path = "sub-src/{{cookiecutter.project_slug}}_cli", develop = true}
 click = "^8.1.0"
 django-environ = "^0.8.1"
 djangomix = "^1.1.3"

@@ -40,7 +40,7 @@ INSTALLED_APPS = [
     "django.contrib.messages",
     "django.contrib.staticfiles",
     "djangomix",
-    "{{cookiecutter.project_name}}",
+    "{{cookiecutter.project_slug}}",
 ]
 
 if DEBUG:
@@ -64,7 +64,7 @@ LANGUAGES = [
     ("en", _("English")),
 ]
 
-ROOT_URLCONF = "{{cookiecutter.project_name}}.urls"
+ROOT_URLCONF = "{{cookiecutter.project_slug}}.urls"
 
 TEMPLATES = [
     {
@@ -83,7 +83,7 @@ TEMPLATES = [
     },
 ]
 
-WSGI_APPLICATION = "{{cookiecutter.project_name}}.wsgi.application"
+WSGI_APPLICATION = "{{cookiecutter.project_slug}}.wsgi.application"
 
 
 # Database
@@ -92,7 +92,7 @@ WSGI_APPLICATION = "{{cookiecutter.project_name}}.wsgi.application"
 DATABASES = {
     "default": {
         "ENGINE": "django.db.backends.sqlite3",
-        "NAME": env.str("DATABASE_NAME", f"{{cookiecutter.project_name}}.sqlite"),
+        "NAME": env.str("DATABASE_NAME", f"{{cookiecutter.project_slug}}.sqlite"),
         "USER": env.str("DATABASE_USER", env.NOTSET),
         "PASSWORD": env.str("DATABASE_PASSWORD", env.NOTSET),
         "HOST": env.str(
@@ -123,8 +123,8 @@ AUTH_PASSWORD_VALIDATORS = [
 
 
 # Uncomment to use custom user model
-# AUTH_USER_MODEL = "{{cookiecutter.project_name}}_user.User"
-# AUTHENTICATION_BACKENDS = ["{{cookiecutter.project_name}}.auth.AuthBackend"]
+# AUTH_USER_MODEL = "{{cookiecutter.project_slug}}_user.User"
+# AUTHENTICATION_BACKENDS = ["{{cookiecutter.project_slug}}.auth.AuthBackend"]
 
 # Internationalization
 # https://docs.djangoproject.com/en/3.1/topics/i18n/

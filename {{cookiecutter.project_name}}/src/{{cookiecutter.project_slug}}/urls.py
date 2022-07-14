@@ -2,7 +2,7 @@ from django.conf import settings
 from django.contrib import admin
 from django.urls import include, path
 
-from {{cookiecutter.project_name}} import views
+from {{cookiecutter.project_slug}} import views
 
 urlpatterns = [
     path("", views.index),

@@ -5,7 +5,7 @@ import click
 
 @click.group()
 def cli():
-    os.environ.setdefault("DJANGO_SETTINGS_MODULE", "{{cookiecutter.project_name}}.settings")
+    os.environ.setdefault("DJANGO_SETTINGS_MODULE", "{{cookiecutter.project_slug}}.settings")
     import django
 
     django.setup()
@@ -38,7 +38,7 @@ def run_gunicorn(address, use_sentry, sentry_env, serve_static=False, reload_=Fa
     import multiprocessing
     from django.conf import settings
     from whitenoise import WhiteNoise
-    from {{cookiecutter.project_name}}.wsgi import application
+    from {{cookiecutter.project_slug}}.wsgi import application
     from gunicorn.app.base import BaseApplication
     from sentry_sdk.integrations.django import DjangoIntegration
 
