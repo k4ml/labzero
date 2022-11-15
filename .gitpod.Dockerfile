@@ -17,7 +17,8 @@ RUN pip install -U pip \
     && pipx install typecov==0.2.1 \
     && pipx install pre-commit==2.20.0 \
     && pipx install pre-commit-hooks==4.3.0 \
-    && pipx install codespell==2.1.0
+    && pipx install codespell==2.1.0 \
+    && pipx install cookiecutter
 
 # [Optional] Uncomment this section to install additional OS packages.
 RUN sudo apt-get update && export DEBIAN_FRONTEND=noninteractive \
