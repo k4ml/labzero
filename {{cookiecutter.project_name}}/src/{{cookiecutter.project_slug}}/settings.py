@@ -91,7 +91,7 @@ WSGI_APPLICATION = "{{cookiecutter.project_slug}}.wsgi.application"
 
 DATABASES = {
     "default": {
-        "ENGINE": "django.db.backends.sqlite3",
+        "ENGINE": "django.db.backends." + env.str("DATABASE_ENGINE", "sqlite3"),
         "NAME": env.str("DATABASE_NAME", f"{{cookiecutter.project_slug}}.sqlite"),
         "USER": env.str("DATABASE_USER", env.NOTSET),
         "PASSWORD": env.str("DATABASE_PASSWORD", env.NOTSET),
