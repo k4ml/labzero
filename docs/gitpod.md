@@ -38,3 +38,14 @@ The following environment variables already set as Gitpod settings variables:-
 ```
 env | grep DATABASE
 ```
+
+In the end, you'll have 2 directories in your `/workspace`:-
+
+```
+gitpod /workspace $ tree -L 1
+.
+├── labzero
+└── myapp
+
+2 directories, 0 file
+```
