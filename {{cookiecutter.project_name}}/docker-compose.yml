@@ -1,0 +1,47 @@
+version: '3.7'
+
+services:
+  db:
+    image: postgres:11.2-alpine
+    container_name: {{cookiecutter.project_slug}}_db
+    command: >
+      postgres
+      -c log_statement=all
+      -c max_connections=1000
+      -c log_connections=true
+      -c log_disconnections=true
+      -c log_duration=true
+    ports:
+      - "5432:5432"
+    volumes:
+      - ./.docker:/docker-entrypoint-initdb.d
+
+      - type: tmpfs
+        target: /var/lib/postgresql/data
+        tmpfs:
+          size: 4294967296  # 4 GB
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U postgres"]
+      interval: 5s
+      timeout: 5s
+      retries: 5
+
+  redis:
+    image: redis:5.0.5
+    container_name: {{cookiecutter.project_slug}}_redis
+    ports:
+      - "6379:6379"
+
+  adminer:
+    image: adminer
+    container_name: {{cookiecutter.project_slug}}_adminer
+    command: ["php", "-S", "0.0.0.0:8081", "-t", "/var/www/html"]
+    links:
+      - "db:db"
+    ports:
+      - "8081:8081"
+    environment:
+      DATABASE_URL: "postgres://{{cookiecutter.project_slug}}_dev:pgsql@db:5432/{{cookiecutter.project_slug}}_dev?sslmode=disable"
+    depends_on:
+      db:
+        condition: service_healthy
