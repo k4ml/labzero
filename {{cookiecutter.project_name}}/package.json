@@ -5,11 +5,11 @@
   "main": "index.js",
   "scripts": {
     "dev": "npm run development",
-    "development": "cross-env NODE_ENV=development node_modules/webpack/bin/webpack.js --progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js",
-    "watch": "npm run development -- --watch",
-    "hot": "cross-env NODE_ENV=development node_modules/webpack-dev-server/bin/webpack-dev-server.js --inline --hot --config=node_modules/laravel-mix/setup/webpack.config.js",
+    "development": "mix",
+    "watch": "mix watch",
+    "hot": "mix watch --hot",
     "prod": "npm run production",
-    "production": "cross-env NODE_ENV=production node_modules/webpack/bin/webpack.js --no-progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js"
+    "production": "mix --production"
   },
   "keywords": [],
   "author": "",
@@ -30,11 +30,10 @@
     "@tailwindcss/typography": "^0.4.1",
     "alpinejs": "^2.8.2",
     "axios": "^0.21.1",
-    "tailwindcss-multi-theme": "^1.0.4",
     "tailwindcss-tables": "^0.4.0",
     "windstrap": "^0.0.4"
   },
   "engines": {
-    "node": "14.17.1"
+    "node": "14.20.0"
   }
 }
