@@ -3,6 +3,8 @@ from os.path import abspath
 
 import environ
 
+from {{cookiecutter.project_slug}} import dj_database_url
+
 try:
     from django.utils.translation import ugettext_lazy as _
 except ImportError:
@@ -89,18 +91,10 @@ WSGI_APPLICATION = "{{cookiecutter.project_slug}}.wsgi.application"
 # Database
 # https://docs.djangoproject.com/en/3.1/ref/settings/#databases
 
-DATABASES = {
-    "default": {
-        "ENGINE": "django.db.backends." + env.str("DATABASE_ENGINE", "sqlite3"),
-        "NAME": env.str("DATABASE_NAME", f"{{cookiecutter.project_slug}}.sqlite"),
-        "USER": env.str("DATABASE_USER", env.NOTSET),
-        "PASSWORD": env.str("DATABASE_PASSWORD", env.NOTSET),
-        "HOST": env.str(
-            "DATABASE_HOST",
-            env.NOTSET,
-        ),
-        "PORT": env.str("DATABASE_PORT", env.NOTSET),
-    },
+DATABASES = {'default': dj_database_url.config(conn_max_age=600)}
+DATABASES["default"]["TEST"] = {
+    "NAME": "{{cookiecutter.project_slug}}_test",
+    "USER": "{{cookiecutter.project_slug}}_test",
 }
 
 # Password validation
