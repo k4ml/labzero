@@ -14,7 +14,7 @@ services:
     ports:
       - "5432:5432"
     environment:
-      POSTGRESQL_PASSWORD: secret
+      POSTGRES_PASSWORD: secret
     volumes:
       - ./.docker:/docker-entrypoint-initdb.d
 
