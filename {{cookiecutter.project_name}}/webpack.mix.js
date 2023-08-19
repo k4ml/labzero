@@ -11,11 +11,11 @@ let mix = require('laravel-mix');
  |
  */
 
-let staticPath = "static/build";
+let staticPath = "static/mix/build";
 let resourcesPath = "src/{{cookiecutter.project_name}}/fe";
 
-mix.setResourceRoot("/static/build"); // setResroucesRoots add prefix to url() in scss on example: from /images/close.svg to /static/images/close.svg
-mix.setPublicPath("static/build"); // Path where mix-manifest.json is created
+mix.setResourceRoot("/static/mix/build"); // setResroucesRoots add prefix to url() in scss on example: from /images/close.svg to /static/images/close.svg
+mix.setPublicPath("static/mix/build"); // Path where mix-manifest.json is created
 
 // if you don't need browser-sync feature you can remove this lines
 if (process.argv.includes("--browser-sync")) {

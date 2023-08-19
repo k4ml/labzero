@@ -145,9 +145,12 @@ USE_TZ = True
 
 STATIC_URL = "/static/"
 STATICFILES_DIRS = (os.path.join(BASE_DIR, "static"),)
+STATIC_ROOT = os.path.join(BASE_DIR, "public")
 
 # DJANGOMIX
 LARAVELMIX_PUBLIC_URL = STATIC_URL + 'build/'
+PUBLIC_URL = LARAVELMIX_PUBLIC_URL = STATIC_URL + 'mix/build'
+MANIFEST_DIRECTORY = LARAVELMIX_MANIFEST_DIRECTORY = os.path.join(BASE_DIR, "static/mix/build")
 # END DJANGOMIX
 MEDIA_URL = "/media/"
 MEDIA_ROOT = os.path.join(BASE_DIR, "media")
