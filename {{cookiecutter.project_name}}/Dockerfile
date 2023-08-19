@@ -3,7 +3,8 @@ FROM python:3.10-buster as py-build
 # [Optional] Uncomment this section to install additional OS packages.
 RUN apt-get update && export DEBIAN_FRONTEND=noninteractive \
      && apt-get -y install --no-install-recommends netcat util-linux \
-        vim bash-completion yamllint postgresql-client
+        vim bash-completion yamllint postgresql-client python3-dev \
+	libpq-dev
 
 RUN curl -sSL https://install.python-poetry.org | POETRY_HOME=/opt/poetry python3 -
 
@@ -20,6 +21,8 @@ WORKDIR /app
 RUN npm install && npm run production
 
 FROM python:3.10-slim-buster
+
+RUN apt-get update && apt-get -y install libpq-dev
 
 EXPOSE 8000
 COPY --from=py-build /app /app
