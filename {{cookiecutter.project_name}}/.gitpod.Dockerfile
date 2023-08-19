@@ -22,7 +22,7 @@ RUN pip install -U pip \
 # [Optional] Uncomment this section to install additional OS packages.
 RUN sudo apt-get update && export DEBIAN_FRONTEND=noninteractive \
      && sudo apt-get -y install --no-install-recommends netcat util-linux \
-        vim bash-completion yamllint postgresql-client
+        vim bash-completion yamllint postgresql-client python3-dev
 
 RUN poetry self update
 
