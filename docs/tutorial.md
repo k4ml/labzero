@@ -1,5 +1,11 @@
 ## What you will learn?
 - How to generate new project using cookiecutter and labzero project template
+- Sign up Gitpod
+- Sign up Render
 - Run labzero-example project
+  - Create new github repo using https://github.com/lalokalabs/labzero-example as template
   - Project structures for a Django application
-  - How to use laravel-mix to organize FE assets
+  - Run in Gitpod workspace - https://gitpod.io/#https://github.com/{username}/labzero-example
+  - Using poetry for python dependencies
+  - Using nvm and npm for FE environment setup
+  - Using laravel-mix to organize FE assets
