@@ -13,3 +13,4 @@
   - Using poetry for python dependencies
   - Using nvm and npm for FE environment setup
   - Using laravel-mix to organize FE assets
+  - Custom project cli with click
