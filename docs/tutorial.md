@@ -7,6 +7,9 @@
   - Create new github repo using https://github.com/lalokalabs/labzero-example as template
   - Project structures for a Django application
   - Run in Gitpod workspace - https://gitpod.io/#https://github.com/{username}/labzero-example
+    - `docker compose up`
+    - `poetry run myapp manage migrate`
+    - `poetry run myapp manage runserver`
   - Using poetry for python dependencies
   - Using nvm and npm for FE environment setup
   - Using laravel-mix to organize FE assets
