@@ -1,5 +1,6 @@
 ## What you will learn?
 - How to generate new project using cookiecutter and labzero project template
+  - Just demo since we don't have Gitpod workspace yet (but can try on local machine) 
 - Sign up Gitpod
 - Sign up Render
 - Run labzero-example project
